@@ -1196,6 +1196,7 @@ static BOOL xf_pre_connect(freerdp* instance)
 	xfc->fullscreen = freerdp_settings_get_bool(settings, FreeRDP_Fullscreen);
 	xfc->decorations = freerdp_settings_get_bool(settings, FreeRDP_Decorations);
 	xfc->grab_keyboard = freerdp_settings_get_bool(settings, FreeRDP_GrabKeyboard);
+    fprintf(stderr, "DEBUG: grab keyboard=%d\n", xfc->grab_keyboard);
 	xfc->fullscreen_toggle = freerdp_settings_get_bool(settings, FreeRDP_ToggleFullscreen);
 	if (!freerdp_settings_get_bool(settings, FreeRDP_AuthenticationOnly))
 		xf_button_map_init(xfc);
